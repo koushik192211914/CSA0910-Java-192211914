@@ -1,0 +1,24 @@
+public class R192210191
+{
+public static void main(String[] arg)
+{
+int arr[]={2,3,7,8};
+int target=9;
+int n=arr.length;
+for(int i=0;i<n;i++)
+{
+for(int j=i+1;j<n;j++)
+{
+if(arr[i]+arr[j]==target)
+{
+System.out.print(arr[i]+" "+arr[j]);
+return ;
+}
+}
+}
+}
+}
+example:
+arr[]={2,3,4,5,7};
+target=9;
+output:2,7.
