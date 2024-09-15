@@ -1,0 +1,49 @@
+import java.util.Scanner;
+class student
+{
+  int m1,m2,m3,m4;
+  String name;
+  public student(int m1,int m2,int m3,int m4)
+  {
+    this.m1=m1;
+    this.m2=m2;
+    this.m3=m3;
+    this.m4=m4;
+  }
+}
+   class grade extends student
+  {
+    public grade(int m1,int m2,int m3,int m4)
+    {
+      super(m1,m2,m3,m4);
+    }
+     public void cal()
+     {
+       int avg=(m1+m2+m3+m4)/4;
+       System.out.println("avg is:"+avg);
+       if(avg>=90)
+       {
+         System.out.println("A grade");
+       }
+       else if(avg>=80)
+       {
+         System.out.println("B grade");
+         }
+       else if(avg>=70)
+       {
+         System.out.println("C grade");
+         }
+       else if(avg<=50)
+       {
+         System.out.println("F grade");
+         }
+     }
+  }
+public class R192210191
+{
+  public static void main(String[] arg)
+  {
+    grade obj=new grade(87,98,59,90);
+    obj.cal();
+  }
+}
