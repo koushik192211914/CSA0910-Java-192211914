@@ -1,0 +1,27 @@
+package saijava;
+import java.util.Scanner;
+public class java
+{
+	public static void main(String[] arg)
+	{
+	Scanner input=new Scanner(System.in);
+	int n=input.nextInt();
+	int sum=0;
+	int arr[]=new int[n];
+	for(int i=0;i<n;i++) {
+		arr[i]=input.nextInt();
+	}
+	try
+	{
+		for(int i=0;i<n;i++)
+		{
+			sum+=arr[i];
+		}
+	}
+	catch(ArrayIndexOutOfBoundsException e)
+	{
+	System.out.println("invalid entries");	
+	}
+	System.out.print("sum of array elements is:"+sum);
+	}
+}

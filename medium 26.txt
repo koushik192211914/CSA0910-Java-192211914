@@ -1,0 +1,13 @@
+package saijava;
+import java.util.Scanner;
+public class java
+{
+	public static void main(String[] arg)
+	{
+		Scanner input=new Scanner(System.in);
+		String s=input.nextLine();
+		String w[]=s.split(" ");
+		int len=w[w.length-1].length();
+		System.out.println("length is:"+len);
+	}
+}
