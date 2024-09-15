@@ -1,0 +1,17 @@
+package saijava;
+import java.time.LocalDate;
+import java.time.DayOfWeek;
+public class practice
+{
+	public static void main(String[] arg)
+	{
+		int day = 24;
+        int month = 4;
+        int year = 2003;
+
+		LocalDate id=LocalDate.of(year, month, day);
+		DayOfWeek dw=id.getDayOfWeek();
+		String dwstring=dw.name();
+		System.out.println(dwstring.substring(0,1)+dwstring.substring(1).toLowerCase());
+	}
+}

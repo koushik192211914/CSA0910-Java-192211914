@@ -1,0 +1,354 @@
+4.
+  package saijava;
+import java.util.Scanner;
+public class pp {
+ public static void main(String[] args)
+ {
+	 Scanner input=new Scanner(System.in);
+	 int m=input.nextInt();
+	 int arr1[]=new int[100];
+	 int k=0;
+	 
+	 for(int i=2;i<100;i++)
+	 {
+		 int count=0;
+		 for(int j=1;j<=i;j++)
+		 {
+		if(i%j==0)
+		{
+			count++;
+		}
+	 }
+		 if(count==2)
+		 {
+			 arr1[k]=i;
+			 k++;
+		 }
+ }
+	 System.out.println(arr1[m-1]);
+	 for(int i=m;i<m+m;i++)
+	 {
+		 System.out.print(arr1[i]+" ");
+	 }
+}
+}
+5.
+      package saijava;
+import java.util.Scanner;
+public class pp {
+ public static void main(String[] args)
+ {
+	 Scanner input=new Scanner(System.in);
+	 int upper=input.nextInt();
+	 int lower=input.nextInt();
+	 int x=1;
+	 while(x*x<upper)
+	 {
+		int sum=0;
+		int y=x*x;
+		int t=y;
+		while(t!=0)
+		{
+			int rem=t%10;
+			sum+=rem;
+			t=t/10;
+		}
+		if(sum<10)
+		{
+			System.out.print(y+" ");
+		}
+		x++;
+	 }	 
+}
+}
+6.
+ public class R192210191 {
+    private static void generatePermutations(String prefix, String str) {
+        int n = str.length();
+        if (n == 0) {
+            System.out.println(prefix);
+        } else {
+            for (int i = 0; i < n; i++) {
+                generatePermutations(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1));
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String number = "143";
+
+        System.out.println("Permutations are:");
+        generatePermutations("", number);
+    }
+}
+
+
+
+7.
+  package saijava;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Arrays;
+public class java {
+	public static void main(String[] args)
+	{
+		Scanner input=new Scanner(System.in);
+		int lower=input.nextInt();
+		int upper= input.nextInt();
+		for(int i=lower;i<=upper;i++)
+		{
+		 System.out.println("("+i+","+(i*i)+")"+" ");
+
+	}
+}
+}
+8.
+class bank_account
+{
+  String name;
+  int acc;
+  int balance;
+  bank_account(String s,int a,int b)
+  {
+    name=s;
+    acc=a;
+    balance=b;
+  }
+  public void deposit(int money)
+  {
+    balance+=money;
+  }
+  public void withdraw(int m1)
+  {
+    balance-=m1;
+  }
+  public void display()
+  {
+    System.out.println("name is:"+name);
+    System.out.println("acc nu is:"+acc);
+    System.out.println("money after deposit:"+balance);
+  }
+}
+public class R192210191
+{
+  public static void main(String[] args)
+  {
+    int acc=1234;
+    int bal=12000;
+    String name="sai";
+    int w=1200;
+    int d=2000;
+    bank_account bank=new bank_account(name,acc,bal);
+    bank.deposit(d);
+    bank.withdraw(w);
+    bank.display();
+  }
+}
+9.
+package saijava;
+import java.util.Scanner;
+public class practice
+{
+ public static int revnum(int num)
+ {
+ int rev=0;
+ while(num!=0)
+ {
+ int rem=num%10;
+ rev=rev*10+rem;
+ num=num/10;
+ }
+ return rev;
+ }
+ public static boolean check(int num)
+ {
+ int rev= revnum(num);
+ if(num==rev)
+ return true;
+ else
+ return false;
+ }
+ public static void add(int num)
+ {
+ if(check(num)) {
+ System.out.println("palindrome");
+ }
+ else
+ {
+ while(!check(num))
+ {
+ int rev=revnum(num);
+ int sum=num+rev;
+ System.out.println(num+"+"+rev+"="+sum);
+ num=sum;
+ }
+ }
+ }
+ public static void main(String[] args)
+ {
+ Scanner input=new Scanner(System.in);
+ int num=input.nextInt();
+ add(num);
+ }
+}
+13.
+  package saijava;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Arrays;
+public class java {
+	public static void main(String[] args)
+	{
+		Scanner input=new Scanner(System.in);
+		int m=0;
+		String s=input.nextLine();
+		String w[]=s.split(" ");
+        if(w.length>0)
+        {
+        	m=w[w.length-1].length();
+	}
+        System.out.println("length is:"+m);
+}
+}
+14.
+package saijava;
+import java.util.Scanner;
+public class java {
+	public static void main(String[] args)
+	{
+		Scanner input=new Scanner(System.in);
+		int uc=0;
+		int lc=0;
+		int nc=0;
+		char c;
+		while(true)
+		{
+			c=input.next().charAt(0);
+			if(c=='*')
+			{
+				break;
+			}
+			if(Character.isUpperCase(c))
+			{
+				uc++;
+			}
+			else if(Character.isLowerCase(c))
+			{
+			lc++;
+			}
+			else if(Character.isDigit(c))
+			{
+				nc++;
+			}
+		}
+		System.out.println("uppercase count is:"+uc);
+		System.out.println("lower case count is:"+lc);
+		System.out.println("numbers are:"+nc);
+}
+}
+18.
+import java.util.Scanner;
+public class R192210191
+{
+public static void main(String[] arg)
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a number: ");
+int n=sc.nextInt();
+int s=0;
+while(n>0){
+ if(n%2==0){
+ n=n/2;
+ }
+ else{
+ n=n-1;
+ }
+ s=s+1;
+}
+System.out.println(s);
+}
+}
+16.
+import java.util.Scanner;
+public class R192210191
+{
+public static void main(String[] arg)
+{
+Scanner input=new Scanner(System.in);
+String s=input.nextLine();
+String s2=input.nextLine();
+int l1=s.length();
+int l2=s2.length();
+char t1[]=s.toCharArray();
+char t2[]=s2.toCharArray();
+int count=0;
+for(int i=0;i<l1;i++)
+{
+for(int j=0;j<l2;j++)
+{
+if(t1[i]==t2[j])
+{
+count++;
+break;
+}
+}
+}
+if(count==l1)
+{
+System.out.println("true");
+}
+else
+System.out.println("false");
+}
+}
+15.
+import java.util.Scanner;
+public class R192210191
+{
+ public static int value(char c)
+ {
+ if(c=='I')
+ return 1;
+ if(c=='V')
+ return 5;
+ if(c=='X')
+ return 10;
+ if(c=='L')
+ return 50;
+ if(c=='C')
+ return 100;
+ if(c=='D')
+ return 500;
+ if(c=='M')
+ return 1000;
+ return -1;
+ }
+ public static int romantodecimal(String str)
+ {
+ int res=0;
+ for(int i=0;i<str.length();i++)
+ {
+ int s1=value(str.charAt(i));
+ if(i+1<str.length())
+ {
+ int s2=value(str.charAt(i+1));
+ if(s1>=s2)
+ res=res+s1;
+ else
+ {
+ res=res+s2-s1;
+ i++;
+ }
+ }
+ else
+ res=res+s1;
+ }
+ return res;
+ }
+ public static void main(String[] args)
+ {
+ Scanner input=new Scanner(System.in);
+ String str=input.next();
+ System.out.println(romantodecimal(str));
+ }
+}

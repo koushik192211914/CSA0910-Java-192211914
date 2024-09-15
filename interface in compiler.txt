@@ -1,0 +1,28 @@
+interface drawable
+{
+  void draw();
+}
+class circle implements drawable
+{
+public void draw()
+{
+System.out.println("good color");
+}
+}
+class square implements drawable
+{
+public void draw()
+{
+System.out.println("bad colour");
+}
+}
+public class R192210191
+{
+  public static void main(String[] arg)
+  {
+    drawable obj=new circle();
+    obj.draw();
+    drawable obj1=new square();
+    obj1.draw();
+  }
+}

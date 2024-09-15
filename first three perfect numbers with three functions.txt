@@ -1,0 +1,32 @@
+package saijava;
+import java.util.Scanner;
+public class practice
+{
+  public static void perfect(int n)
+  {
+    int sum=0;
+    for(int i=1;i<n;i++)
+    {
+      if(n%i==0)
+      {
+        sum+=i;
+      }
+    }
+    if(sum==n)
+      {
+        System.out.print(n+" ");
+    }
+  }
+  public static void print(int n)
+  {
+    for(int i=2;i<=n;i++)
+    {
+      perfect(i);
+    }
+  }
+  public static void main(String[] arg)
+  {
+    int n=1000;
+    print(n);
+  }
+}

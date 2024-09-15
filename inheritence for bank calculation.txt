@@ -1,0 +1,61 @@
+import java.util.Scanner;
+class Account{
+    int accountnum;
+    String name;
+    double balance;
+    
+    public Account(int a, double b, String n) {
+        accountnum = a;
+        balance = b;
+        name = n;
+    }
+    public void displayAccountDetails() {
+        System.out.println("Account Holder: " + name);
+        System.out.println("Account Number: " + accountnum);
+        System.out.println("Balance: " + balance);
+    }
+}
+class SavingsAccount extends Account {
+    public SavingsAccount(int a, double b, String n) {
+        super(a, b, n);
+    }
+    public void withdraw(int with) {
+            balance -= with;
+            System.out.println("Withdrawal successful. New balance: " + balance);
+        
+    }
+    public void deposit(int depo) {
+        balance += depo;
+        System.out.println("Deposit successful. New balance: " + balance);
+    }
+}
+class CheckingAccount extends Account {
+    public CheckingAccount(int a, double b, String n) {
+        super(a, b, n);
+    }
+    public void withdraw(int with) {
+        
+            balance -= with;
+            System.out.println("Withdrawal successful. New balance: " + balance);        
+    }
+    public void deposit(int depo) {
+        
+        balance += depo;
+        System.out.println("Deposit successful. New balance: " + balance);
+    }
+}
+public class R192210191
+{
+    public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);
+        int d=input.nextInt();
+        SavingsAccount savings = new SavingsAccount(1234, 10000, "Sai");
+        savings.displayAccountDetails();
+        savings.deposit(d);
+        savings.withdraw(2000);
+        CheckingAccount checking = new CheckingAccount(5678, 5000, "Raj");
+        checking.displayAccountDetails();
+        checking.deposit(6000);
+        checking.withdraw(2000);
+    }
+}

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class perfectnumber {
+    public  void perfect(int num) {
+        int sum = 0;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+        if(sum==num)
+        {
+          System.out.print(num+" ");
+        }
+    }
+    public void print(int n) {
+        for (int i = 2; i <=n; i++) {
+            perfect(i);
+        }
+    }
+}
+  public class R192210191
+  {
+    public static void main(String[] args) {
+      Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+      perfectnumber obj=new perfectnumber();
+        obj.print(n);
+    }
+}
